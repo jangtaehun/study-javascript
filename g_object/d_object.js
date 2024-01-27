@@ -3,6 +3,8 @@
 // 프로토타입은 함수로 선언하며, 반드시 대문자로 시작한다.
 // this는 해당 객체를 의미한다.
 
+let lunch = new User(); //생성자
+
 function User(id, pw, name, age) {
     this.id = id;
     this.pw = pw;
@@ -11,5 +13,7 @@ function User(id, pw, name, age) {
 }
 
 jang = new User("jth", "1234", "장태훈", 20);
-
 console.log(jang);
+
+lunch.id = "jth";
+console.log(lunch);

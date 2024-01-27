@@ -10,3 +10,5 @@ lunch.pay = () => {
 };
 
 lunch.pay();
+
+console.log(lunch);

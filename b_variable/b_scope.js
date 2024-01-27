@@ -1,3 +1,11 @@
+var age = 20;
+var age = 30;
+console.log(age);
+
+let width = 10; //업데이트 가능하지만 재선언 불가
+width = 20;
+console.log(width);
+
 //지역 변수
 for (let i = 0; i < 10; i++) {
     console.log(i);

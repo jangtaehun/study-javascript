@@ -5,11 +5,10 @@ let user = {
     age: 20,
     address: "경기도",
     intoduce: () => {
-        // 메소드
         console.log("hi!!");
     },
 };
-// console.log(typeof user);
+console.log(typeof user);
 console.log(user.intoduce);
 console.log(user.intoduce());
 

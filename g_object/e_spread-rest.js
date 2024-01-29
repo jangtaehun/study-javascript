@@ -30,10 +30,8 @@ console.log();
 // 객체 혹은 배열을 펼친다
 // 요소를 하나씩 모두 전개시킬 때는 Spread의 역할
 const animals = ["개", "고양이", "참새"];
-const abcd = "공사칠구";
-// const anotherAnimals = [...animals, "비둘기"];
+const anotherAnimals = [...animals, "비둘기"];
 // const anotherAnimals = [...animals];
-const anotherAnimals = [...abcd];
 console.log(anotherAnimals);
 
 const numbers = [1, 2, 3, 4, 5];

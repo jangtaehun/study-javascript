@@ -17,7 +17,15 @@ console.log(datas.slice(1));
 datas.splice(1, 1);
 console.log(datas);
 
-datas.splice(1, 1, 200);
+const ar = {
+    key: "value",
+    name: "jth",
+    age: 20,
+    address: "경기도",
+};
+
+const br = ["a", "b", "c", "d"];
+datas.splice(1, 1, ar);
 console.log(datas);
 
 // pop(): 마지막 요소 삭제
@@ -44,15 +52,26 @@ const numbers = [...data];
 console.log(numbers);
 
 // 비구조화 할당
+// let data = [10, 8, 20, 3, 2];
 const [number1, number2, number3, number4, number5, number6 = 5] = data;
 console.log(number1, number2, number3, number4, number5, number6);
 
 // forEach(callback) (배열 원소의 값, 현재 요소의 인덱스, 현재 배열)
-// forEach()는 문밖으로 리턴값을 받지 못한다
+// forEach()는 forEach()문밖으로 리턴값을 받지 못한다
 data.forEach((data, i, array) => {
     console.log("Index: " + i + " Value: " + data);
     // datas[i] = i + 1;
     console.log(array);
+});
+console.log();
+
+data.forEach((data, i) => {
+    console.log("Index: " + i + " Value: " + data);
+});
+console.log();
+
+data.forEach((data) => {
+    console.log("Value: " + data);
 });
 console.log();
 
@@ -72,15 +91,17 @@ console.log();
 // 초기값을 설정하지 않으면 data에 1번 째부터 들어온다.
 // 이 때, 0번 째 값이 variable로 들어온다.
 var reDatas = [10, 8, 20, 3, 2];
+
 var dataResult = reDatas.reduce((variable, reData, i) => {
-    // console.log(variable); 0번 째, 한 번만 출력
-    console.log(reData, i);
+    console.log(variable); //0번 째, 한 번만 출력
+    console.log(reData, i); //reData=값, i=인덱스
 }); // 초기 값을 설정하지 않으면 1번 째 데이터부터 들어온다.
 console.log();
 
 var dataResult = reDatas.reduce((variable, reData, i) => {
     console.log(variable, reData, i);
 }, 0); //초기 값을 설정해 0번 째 데이터부터 들어온다.
+//초기 값 0 출력, redata, i 0번 째부터 출력
 console.log();
 
 var dataResult = reDatas.reduce((variable, reData, i) => {
@@ -98,6 +119,11 @@ var dataResult = reDatas.reduce((variable, reData, i) => {
 }, {});
 console.log(dataResult);
 console.log();
+
+const inputs = "공사칠구";
+const [...input] = inputs; //list로
+// const {...input} = inputs; //객체로
+console.log(input);
 
 // // 문자열
 // // split(): 문자열을 Array 객체로 사용하고자 한다면, split()을 사용한다.

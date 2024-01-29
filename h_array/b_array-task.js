@@ -16,13 +16,19 @@
 // 한글을 숫자로
 // 삼사칠구 -> 3479
 // split()을 사용하지 않는다.
-// const changeNumber = (...input) => {
-//     const hangul = [..."공일이삼사오육칠팔구"];
-//     console.log(hangul);
-//     console.log(input);
-//     return Number(input.map((c) => hangul.indexOf(c)).join(""));
-//     // return parseInt(input.map((c) => hangul.indexOf(c)).join(""));
-// };
+const changeNumber = (...input) => {
+    const hangul = [..."공일이삼사오육칠팔구"];
+    console.log(hangul);
+    console.log(input);
+    input.map((c) => console.log(c));
+    input.map((c) => console.log(hangul.indexOf(c)));
+    // indexOf(value): value를 해당 Array객체에서 찾은 뒤 인덱스 번호를 리턴한다. 못찾으면 -1을 리턴한다.
+    return input.map((c) => hangul.indexOf(c)).join("");
+    // return parseInt(input.map((c) => hangul.indexOf(c)).join(""));
+};
+
+// const inputs = "공사칠구";
+// const { ...input } = inputs;
 
 // const input = "공사칠구";
 // const result = changeNumber(...input);
@@ -62,3 +68,10 @@ const result = new Array(100)
     .fill(0)
     .reduce((variable, _, i) => variable + i + 1, 0);
 console.log(result);
+
+//reduce (누적할 변수, value, index)
+
+// const c = new Array(10).fill(0).reduce((a, value, c) => {
+//     console.log(c);
+// }, 0);
+// console.log(c);

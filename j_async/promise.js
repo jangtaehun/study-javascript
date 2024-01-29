@@ -1,4 +1,8 @@
 const DB = [];
+
+//then() => 비동기 코드를 작성하는 데 사용되는 Promise의 메서드
+//프로미스가 이행되면 .then() 함수는 프로미스의 결과를 콜백 함수의 첫 번째 인수로 전달
+
 function register(user) {
     const result = saveDB(user).then(sendEmail).then(getResult);
     return result;
@@ -20,7 +24,7 @@ function sendEmail(user) {
 }
 
 function getResult(user) {
-    return `success register ${user.name}`;
+    return `success register ${user.name}, ${user.email}, ${user.password}`;
 }
 
 register({

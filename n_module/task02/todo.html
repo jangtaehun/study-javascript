@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .red {
+                color: red;
+            }
+            .blue {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="get-todos">할 일 불러오기</button>
+        <table class="todos"></table>
+    </body>
+    <script>
+        const button = document.getElementById("get-todos");
+        button.addEventListener("click", (e) => {
+            todoService.findAll(todosLayout.showList);
+        });
+    </script>
+
+    <script src="service.js"></script>
+    <script src="layout.js"></script>
+</html>

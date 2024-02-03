@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>키 이벤트</title>
+    </head>
+    <body>
+        <input type="text" placeholder="이름" autocomplete="off" />
+        <p id="name"></p>
+        <ul></ul>
+    </body>
+    <script>
+        const newDiv = document.createElement("div");
+        const input = document.querySelector("input[placeholder=이름]");
+        const ul = document.querySelector("ul");
+
+        input.addEventListener("keyup", (e) => {
+            if (e.keyCode == 13) {
+                // ul.innerHTML += `<li>${e.target.value}</li>\n`;
+                ul.innerHTML += `<li>${e.target.value}</li>\n`;
+            }
+            // 입력한 키 중, 엔터일 경우 ul안에 li태그로 입력한 문자열 값을 추가한다.
+            // 이때, 작성한 값은 사라지게 한다(빈 문자열을 넣으면 해결가능)
+        });
+
+        // const li = document.createElement("li");
+    </script>
+</html>

@@ -55,6 +55,8 @@ console.log(numbers);
 // let data = [10, 8, 20, 3, 2];
 const [number1, number2, number3, number4, number5, number6 = 5] = data;
 console.log(number1, number2, number3, number4, number5, number6);
+console.log();
+console.log();
 
 // forEach(callback) (배열 원소의 값, 현재 요소의 인덱스, 현재 배열)
 // forEach()는 forEach()문밖으로 리턴값을 받지 못한다
@@ -80,6 +82,7 @@ lists = [1, 2, 13, 44, 25, 36, 6];
 var result = lists.map((list) => list * 2);
 console.log(result);
 
+/*
 // filter(callback)
 var result = lists.filter((a) => a % 5 == 0);
 console.log(result);
@@ -119,17 +122,18 @@ var dataResult = reDatas.reduce((variable, reData, i) => {
 }, {});
 console.log(dataResult);
 console.log();
+*/
 
 const inputs = "공사칠구";
-const [...input] = inputs; //list로
-// const {...input} = inputs; //객체로
+// const [...input] = inputs; //list로
+const { ...input } = inputs; //객체로
 console.log(input);
 
-// // 문자열
-// // split(): 문자열을 Array 객체로 사용하고자 한다면, split()을 사용한다.
-// "월화수목금토일".split("").forEach((data) => {
-//     console.log(data);
-// });
+// 문자열
+// split(): 문자열을 Array 객체로 사용하고자 한다면, split()을 사용한다.
+"월화수목금토일".split("").forEach((data) => {
+    console.log(data);
+});
 
 // // includes(value): value가 문자열에 포함되었는 지 검사
 // console.log("ABCD".includes("B"));

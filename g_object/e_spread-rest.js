@@ -36,7 +36,7 @@ console.log(anotherAnimals);
 
 const numbers = [1, 2, 3, 4, 5];
 const num = { zzone: 1, ddeock: 2 };
-const spreadNumbers = [...numbers, 1000, numbers, num]; // ... => 스프레드를 안 쓰면 그대로 들어간다
+const spreadNumbers = [...numbers, 1000, ...numbers, ...num]; // ... => 스프레드를 안 쓰면 그대로 들어간다
 console.log(spreadNumbers);
 
 var user = {

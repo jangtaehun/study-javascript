@@ -14,10 +14,13 @@
             }
 
             #check:checked ~ label {
+                /* ~ : 주어진 요소의 형제 요소 중에 특정한 조건을 만족하는 요소를 선택 */
+                /* 체크박스가 선택된 경우(체크된 경우), 라벨의 스타일을 변경 */
                 font-weight: bold;
             }
 
             #check:checked ~ #menu {
+                /* 체크박스가 선택된 경우(체크된 경우), 메뉴의 스타일을 변경 */
                 height: 100px;
                 opacity: 100%;
             }
@@ -26,6 +29,7 @@
     <body>
         <input type="checkbox" id="check" style="display: none" />
         <label for="check" style="cursor: pointer">대주제</label>
+
         <div id="menu">소주제</div>
     </body>
 </html>

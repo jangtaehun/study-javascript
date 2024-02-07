@@ -15,5 +15,5 @@ const photoService = (() => {
         callback(photos.slice(0, 2));
     };
 
-    return { getPhotos: getPhotos, getPhotos2: getPhotos2 };
+    return { getPhotos, getPhotos2 };
 })();
